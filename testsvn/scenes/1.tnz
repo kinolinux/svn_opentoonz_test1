@@ -37,7 +37,7 @@
           24 
         </fps>
         <path>
-          "+outputs/.tif"
+          "+outputs\\.tif"
         </path>
         <bpp>
           32 
@@ -129,7 +129,7 @@
           24 
         </fps>
         <path>
-          "+outputs/.tif"
+          "+outputs\\.tif"
         </path>
         <bpp>
           32 
@@ -346,7 +346,15 @@
         A 
         <info dpiType="image"/>
         <path>
-          "+drawings/A.pli"
+          "+drawings\\A.pli"
+        </path>
+        
+      </level>
+      <level id='2'>
+        B 
+        <info dpiType="image"/>
+        <path>
+          "+drawings\\B.tlv"
         </path>
         
       </level>
@@ -354,7 +362,7 @@
     </levels>
     <folder name="Cast" type="default">
       <levels>
-        <level id='1'/>
+        <level id='1'/><level id='2'/>
       </levels>
       </folder>
     <folder name="Audio">
@@ -362,7 +370,7 @@
     </levelSet>
   <xsheet>
     <columns>
-      <levelColumn id='2'>
+      <levelColumn id='3'>
         
         <status>
           0 
@@ -373,7 +381,42 @@
           </cell>
           </cells>
         <fx>
-          <Toonz_columnFx id='3'>
+          <Toonz_columnFx id='4'>
+            
+            <params>
+              </params>
+            <ports>
+              </ports>
+            <numberId>
+              0 
+            </numberId>
+            <name>
+              LevelColumn 
+            </name>
+            <fxId>
+              "" 
+            </fxId>
+            <opened>
+              0 
+            </opened>
+            
+          </Toonz_columnFx>
+          
+        </fx>
+        
+      </levelColumn>
+      <levelColumn id='5'>
+        
+        <status>
+          0 
+        </status>
+        <cells>
+          <cell>
+            0 1 <level id='2'/>0001 0 
+          </cell>
+          </cells>
+        <fx>
+          <Toonz_columnFx id='6'>
             
             <params>
               </params>
@@ -507,6 +550,37 @@
           1.234e+09 5.678e+09 
         </nodePos>
         </pegbar>
+      <pegbar id="Col2">
+        <parent handle="B" id="Table" parentHandle="B">
+          </parent>
+        <isOpened>
+          0 
+        </isOpened>
+        <center>
+          0 0 0 0 
+        </center>
+        <status>
+          0 
+        </status>
+        <sx>
+          <default>
+            1 
+          </default>
+          </sx>
+        <sy>
+          <default>
+            1 
+          </default>
+          </sy>
+        <sc>
+          <default>
+            1 
+          </default>
+          </sc>
+        <nodePos>
+          1.234e+09 5.678e+09 
+        </nodePos>
+        </pegbar>
       <grid_dimension>
         1 
       </grid_dimension>
@@ -514,11 +588,14 @@
     <fxnodes>
       <terminal>
         <fxnode>
-          <Toonz_columnFx id='3'/>
+          <Toonz_columnFx id='4'/>
+        </fxnode>
+        <fxnode>
+          <Toonz_columnFx id='6'/>
         </fxnode>
         </terminal>
       <xsheet>
-        <Toonz_xsheetFx id='4'>
+        <Toonz_xsheetFx id='7'>
           
           <params>
             </params>
@@ -541,13 +618,13 @@
         
       </xsheet>
       <output>
-        <Toonz_outputFx id='5'>
+        <Toonz_outputFx id='8'>
           
           <params>
             </params>
           <ports>
             <source>
-              <Toonz_xsheetFx id='4'/>
+              <Toonz_xsheetFx id='7'/>
             </source>
             </ports>
           <numberId>
@@ -574,5 +651,6 @@
   <history>
     "| #    DATE:       Time:   MACHINE:    USER:           |"
     "| #1   12 апр. 20   13:14               |"
+    "| #2   29 июн 20   16:10   KM2-ПК      km2             |"
   </history>
   </tnz>
